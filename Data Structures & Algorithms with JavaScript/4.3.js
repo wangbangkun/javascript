@@ -15,7 +15,6 @@ function getNum( num, base )
         num = Math.floor( num / base );
         if ( num < base ) {
             result.push( num );
-            num = 0;
         }
     }
     return result.reverse().join("");
@@ -23,5 +22,5 @@ function getNum( num, base )
 
 function isNumber( no )
 {
-    return !isNaN( parseFloat(no) ) && isFinite( no );
+    return !isNaN( parseInt(no) ) && isFinite( no );
 }
